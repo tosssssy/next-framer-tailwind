@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -59,6 +60,21 @@ const Home: NextPage = () => {
           </span>
         </a>
       </footer>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ ease: 'easeOut', duration: 1 }}
+        className='w-72 h-96 bg-gray-200'
+      >
+        s
+      </motion.div>
+      <motion.div
+        style={{ backgroundColor: 'red', width: '30px', height: '30px' }}
+        animate={{
+          x: 100,
+        }}
+      />
     </div>
   );
 };
